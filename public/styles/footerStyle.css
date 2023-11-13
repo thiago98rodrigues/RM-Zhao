@@ -1,0 +1,40 @@
+footer{
+    width: 100%;
+    height: 50vh;
+    font-size: 1.6rem;
+    color: var(--bc-auxiliar-color);   
+}
+
+footer img{
+    width: 15rem;
+}
+
+.footer_text_group{
+    width: 90%;
+    height: 80%;
+    border-radius: 1.6rem;
+    /*background-color: var(--principal-color);*/
+}
+
+.footer_text_group.flex{
+    justify-content: space-around;
+}
+
+.footer_text_group nav{
+    margin-top: 2rem;
+}
+
+.footer_text_group nav ul li{
+    margin-inline: 2rem;
+}
+
+.footer_text_group nav ul li .link{
+    color: var(--bc-auxiliar-color);
+}
+
+.copy_section{
+    width: 50%;
+    /*border-top: 1px solid var(--principal-color-hover);*/
+    padding-top: 2rem;
+}
+

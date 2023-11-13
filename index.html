@@ -5,40 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/styles/main.css">
+    <link rel="stylesheet" href="./public/styles/headerStyle.css">
+    <link rel="stylesheet" href="./public/styles/footerStyle.css">
     <title>Ocrat Mirror</title>
 </head>
-<body>
-    <main class="main">
-        <div class="section-home flex">
-            <header class="header flex">
-                <img src="./public/assets/img/logo.svg" alt="Zhao Logo">
-                <nav>
-                    <ul class="flex">
-                        <li><a href="#" class="link">Home</a></li>
-                        <li><a href="#" class="link">Collections</a></li>
-                        <li><a href="#" class="link">About</a></li>
-                    </ul>
-                </nav>
-                <section class="flex">
-                    <a href="#" class="btn void link flex">
-                        <span>Get e-Book</span>
-                        </a>
-                    <span class="btn-menu flex">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                          </svg>
-                    </span>
-                </section>
-            </header>
+<body class="page flex">
 
-            <div class="home_body flex">
-               
-                <div class="text_group">
-                    <h1 class="title">Chinese language learning <span class="red-emphasis">resources ✦</span> for English speakers</h1>
-                    <p>The site provided stroke order diagrams for Chinese characters, pronunciation help and many other helpful resources.</p>
+    <header class="page__header header flex">
+        <a class="page__header__logo flex link" href="./index.html">
+            <img src="./public/assets/img/logo.svg" alt="Zhao Logo">
+        </a>
+        
+        <nav class="page__header__navbar">
+            <ul class="page__header__navbar__list flex">
+                <li class="page__header__navbar__list-item"><a href="#" class="link">Home</a></li>
+                <li class="page__header__navbar__list-item"><a href="#" class="link">Collections</a></li>
+                <li class="page__header__navbar__list-item"><a href="#" class="link">About</a></li>
+            </ul>
+        </nav>
+
+        <div class="page__header__side flex">
+            <a href="#" class="btn void link flex" target="_blank" download>Get e-Book</a>
+            <span class="btn-menu flex">
+               <img src="./public/assets/icons/menu.svg" alt="">
+            </span>
+        </div>
+    </header>
+
+    <main class="main flex">
+        <section class="home__section flex">             
+            <div class="home__section__text__group">
+                <h1 class="title">
+                    Chinese language learning <span class="red-emphasis">resources</span> for English speakers
+                </h1>
+                <p>The site provided stroke order diagrams for Chinese characters, pronunciation help and many other helpful resources.</p>
                     <div class="search_input_container flex">
                         <input type="text" placeholder="What are you searching for?" id="">
-                        <button class="btn flex"><svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <button class="btn flex">
+                            <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_157_10)">
                                 <path d="M15.392 14.1076C16.6606 12.3245 17.2287 10.1138 16.9828 7.91773C16.737 5.72167 15.6952 3.70221 14.0659 2.26338C12.4367 0.824546 10.3401 0.0724559 8.19561 0.157572C6.05114 0.242688 4.01694 1.15873 2.49999 2.72244C0.983044 4.28615 0.095209 6.38219 0.0141134 8.59124C-0.0669822 10.8003 0.664642 12.9594 2.06261 14.6367C3.46059 16.3139 5.42181 17.3856 7.55391 17.6373C9.68602 17.889 11.8318 17.3022 13.5619 15.9942H13.5606C13.5999 16.0482 13.6418 16.0994 13.6889 16.1494L18.7327 21.3449C18.9783 21.5981 19.3116 21.7404 19.6591 21.7406C20.0066 21.7407 20.34 21.5986 20.5858 21.3456C20.8316 21.0925 20.9698 20.7493 20.9699 20.3913C20.97 20.0333 20.8321 19.6899 20.5864 19.4367L15.5427 14.2412C15.4958 14.1924 15.4455 14.1486 15.392 14.1076ZM15.73 8.9202C15.73 9.89489 15.5437 10.86 15.1815 11.7605C14.8194 12.661 14.2887 13.4792 13.6196 14.1685C12.9505 14.8577 12.1562 15.4044 11.282 15.7774C10.4078 16.1504 9.47087 16.3424 8.52465 16.3424C7.57842 16.3424 6.64147 16.1504 5.76727 15.7774C4.89307 15.4044 4.09876 14.8577 3.42968 14.1685C2.7606 13.4792 2.22985 12.661 1.86775 11.7605C1.50564 10.86 1.31927 9.89489 1.31927 8.9202C1.31927 6.95172 2.07841 5.06387 3.42968 3.67194C4.78095 2.28002 6.61366 1.49804 8.52465 1.49804C10.4356 1.49804 12.2683 2.28002 13.6196 3.67194C14.9709 5.06387 15.73 6.95172 15.73 8.9202Z" fill="currentColor"/>
                                 </g>
@@ -50,14 +54,21 @@
                             </svg>
                         </button>
                     </div>
+
                     <a href="http://lost-theory.org/ocrat/" target="_blank" rel="noopener noreferrer" class="warning_mini_section link flex">
                         <div class="warning_mini_section_header flex">✦</div>
                         <p class="warning_mini_section_paragraph">For more information on the Ocrat.com mirror project see here.</p>
                     </a>
-                    
                 </div>
-                <img src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-            </div>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                <figcaption class="flex">
+                    <a href="https://unsplash.com/pt-br/fotografias/pessoas-na-cidade-proibida-na-china-durante-o-dia-yBroAF1cN3I" target="_blank" rel="noopener noreferrer" class="link">Pessoas na Cidade Proibida na China durante o dia.</a>
+                    <a href="https://unsplash.com/pt-br/@linglivestolaugh" target="_blank" rel="noopener noreferrer" class="link">— @linglivestolaugh</a>  
+                </figcaption>
+            </figure>
+
+        </section>
 
             <div class="info_section flex">
                 <div class="info_block">
@@ -112,7 +123,7 @@
         <div class="collection_section flex">
             <div class="collection_section_text_group">
                 <p>Quality and fast learning</p>
-                <h1 class="title">Quality resource make learning a new language more productive</h1>
+                <h2 class="title">Quality resource make learning a new language more productive</h2>
             </div>
 
             <div class="card_collection_container flex">
@@ -190,33 +201,44 @@
             </div>
         </div>
 
-        <div class="about_section flex">
-            <section class="about flex">
-                <img src="./public/assets/img/logo.svg" alt="">
+        <section id="about" class="about_section flex">
+            <span class="about_us_waning">About Us</span>
+            <h2 class="title">
+                The site provided <span class="red-emphasis">stroke order</span> diagrams for Chinese characters, <span class="red-emphasis">pronunciation help</span> and many other helpful resources. 
+            </h2>
+
+            <figure>
+                <img src="https://images.unsplash.com/photo-1578162472674-694448ce1a1b?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="about_section_img">
+                <figcaption class="flex">
+                    <a href="https://unsplash.com/pt-br/fotografias/casa-de-pagode-marrom-e-cinza-jypsd8FxrQw" target="_blank" rel="noopener noreferrer" class="link">Casa de pagode marrom e cinza.</a>
+                    <a href="https://unsplash.com/@pesce" target="_blank" rel="noopener noreferrer" class="link">— @pesce</a>  
+                </figcaption>
+            </figure>
+
+
+            <div class="about_section_text_group flex">
                 <p class="about_paragraph">
-                    Sometime during the first half of 2005 Ocrat.com, a helpful site for learning the Chinese language, went down and was replaced with the message <span class="italic-empasis">"OCRAT.COM is under construction. This site does not exist at this time"</span>. Because I thought that the site was so useful and it is a shame to see such a good site go offline, I want to bring back the content of the Ocrat site. In late 2005 I downloaded the content from Archive.org and started re-hosting the resources that were available.
+                    Sometime during the first half of 2005 Ocrat.com, a helpful site for learning the Chinese language, went down and was replaced with the message "OCRAT.COM is under construction. This site does not exist at this time". Because I thought that the site was so useful. and it is a shame to see such a good site go offline, I want to bring back the content of the Ocrat site. In late 2005 I downloaded the content from Archive.org and started re-hosting the resources that were available.
                 </p>
+            </div>
+        </sectoin>
 
-                <div class="perfil_comment flex">
-                    <img class="perfil-img" src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                    <div class="perfil_text_group">
-                        <h2 class=".title">Ocrat Mirror</h2>
-                        <p>Chinese language learning resources</p>
-                    </div>
-                    <img class="verify-label_img" src="./public/assets/icons/verify-label.svg" alt="">
-                </div>
-                <!--<span>About us</span><h1 class="title">
-                        The site provided stroke order diagrams for Chinese characters, pronunciation helpand many other helpful resources. 
-                    </h1><img src="https://images.unsplash.com/photo-1529921879218-f99546d03a9d?auto=format&fit=crop&q=80&w=1335&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-
-                    The site provided stroke order diagrams for Chinese characters, Voice of America radio broadcasts in Chinese and English, pronunciation help, and many other helpful resources.
-                
-                -->
-            </section>
-        </div>
     </main>
-    <footer>
-        
+    <footer class="flex">
+        <div class="footer_text_group flex">
+            <img src="./public/assets/img/logowhite.svg" alt="">
+            <nav>
+                <h3>Menu</h3>
+                <ul>
+                    <li><a href="#home" class="link">Home</a></li>
+                    <li><a href="#" class="link">Collections</a></li>
+                    <li><a href="#about" class="link">About</a></li>
+                </ul>
+            </nav>
+            <div class="copy_section flex">
+                <p>Copyright © 2023 Ocrat Mirror - All Rights Reserved </p>
+            </div>
+        </div>   
     </footer>
 </body>
 </html>

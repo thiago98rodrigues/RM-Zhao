@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700;900&family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap');
 
 *{
     padding: 0;
@@ -8,24 +8,30 @@
 }
 
 :root{
-    --principal-color: #D80032;
+    --principal-color: #ED2B2A;
     --bc-princiapl-color: #F5F4F5;
     --bc-auxiliar-color: white;
-    --text-principal-color: #394867;
-    --text-principal-color-7: rgba(57, 72, 103, 0.7);
-    --text-principal-color-5: rgba(57, 72, 103, 0.5);
+    --text-principal-color: #212A3E;
+    --text-principal-color-7: #212A3Eb3;
+    --text-principal-color-5: #212A3E80;
     --text-auxiliar-color: black;
-    --principal-color-hover: #e64f72;
+    --principal-color-hover: #F15A59;
     font-size: 62.5%;
 }
 
-.main{
+html {
+    scroll-behavior: smooth;
+  }
+
+.page{
+    color: var(--text-principal-color);
     font-size: 1.6rem;
     width: 100%;
     min-height: 100vh;
     background-color: var(--bc-auxiliar-color);
 }
 
+.page.flex,
 .main.flex{
     justify-content: space-around;
     flex-direction: column;
@@ -41,11 +47,12 @@
 
 .title,
 .characters_emphasis{
-    font-family: 'Noto Serif SC', serif;
+    font-family: 'Noto Sans SC', sans-serif;
 }
 
 .title{
-    font-weight: 900;
+    line-height: 150%;
+    font-weight: bold;
 }
 
 .subtitle,
@@ -55,7 +62,7 @@
 }
 
 .red-emphasis{
-    font-family: 'Noto Serif SC', serif;
+    font-family: 'Noto Sans SC', sans-serif;
     color: var(--principal-color);
 }
 
@@ -65,112 +72,91 @@
 }
 
 /*--------------------------------------------------------------------------------------------*/
-
-.section-home{
-    width: 100%;
-    min-height: 100vh;
-}
-
-.section-home.flex{
-    justify-content: flex-start;
-    flex-direction: column;
-}
-
-.section-home .header{
-    width: 90%;
-    height: 10vh;
-    margin-top: 3vh;
-    margin-bottom: 4rem;
-}
-
-.section-home .header.flex{
-    justify-content: space-between;
-}
-
-.section-home .header ul{
-    list-style: none;
-}
-
-.section-home .header ul li{
-    margin-inline: 2rem;
-}
-
-.section-home .header ul .link{
-    font-weight: bold;
-    transition: 0.3s;
-    position: relative;
-}
-
-.section-home .header ul .link::before{
-    content: " ";
-    width: 0px;
-    height: 3px;
-    background-color: var(--principal-color-hover);
-    position: absolute;
-    bottom: -5px;
-    transition: 0.3s;
-}
-
-.section-home .header ul .link:hover{
-   color: var(--principal-color-hover);
-}
-
-.section-home .header ul .link:hover::before{
-    width: 80%;
-    color: var(--principal-color-hover);
- }
- 
-
-.section-home .header .btn-menu{
-    cursor: pointer;
-    margin-left: 1rem;
-    width: 4rem;
-    height: 4rem;
-    border: 1px solid #F1F6F9;
-    border-radius: 3rem;
-}
- 
-
-.section-home .home_body{
+.home__section{
     height: 70vh;
     width: 90%;
 }
 
-.section-home .home_body img{
-    height: 100%;
-    object-fit: cover;
-    width: 50%;
-    border-radius: 1.6rem;
-}
-
-.section-home .home_body.flex{
+.home__section.flex{
     justify-content: space-between;
 }
 
-.section-home .home_body .text_group{
-    width: 45%;
+.home__section figure{
+    position: relative;
+    height: 100%;
+    width: 50%;
 }
 
-.section-home .home_body .text_group p{
-    margin-top: 2.5rem;
+.home__section figure img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 1.6rem;
+}
+
+.home__section figure:hover figcaption{   
+    visibility: visible;
+    opacity: 1;
+}
+
+.home__section figure figcaption{
+    color: var(--bc-princiapl-color);
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(175deg, rgba(255, 255, 255, 0.0), rgba(33, 42, 62, 0.5), rgb(33, 42, 62) 90%);
+    padding-inline: 3rem;
+    padding-bottom: 2rem;
+    position: absolute;
+    bottom: 0;
+    border-bottom-left-radius: 1.6rem;
+    border-bottom-right-radius: 1.6rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+} 
+
+.home__section figure figcaption.flex{
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+.home__section figure figcaption .link{
+    text-align: end;
+    width: 70%;
+    font-size: 1.4rem;
+    color: var(--bc-princiapl-color);
+}
+
+.home__section figure figcaption > .link{
+   margin-bottom: 0.5rem;
+}
+
+.home__section__text__group{
+    width: 45%;
+    margin-right: 1rem;
+}
+
+.home__section__text__group p{
+    margin-top: 2rem;
     color: var(--text-principal-color-7);
 }
 
-.section-home .home_body .text_group .title{
+.home__section__text__group .title{
     color: var(--text-principal-color);
-    font-size: 4.5rem;
+    font-size: 4.8rem;
 }
 
-.section-home .home_body .search_input_container{
+.home__section__text__group .search_input_container{
     width: 80%;
     background-color: #F1F6F9;
     height: 5rem;
     border-radius: 5rem;
     padding-inline: 3rem 0.1rem;
-    margin: 5vh 0px 7vh;
+    margin: 5vh 0px 9vh;
 }
 
-.section-home .home_body .search_input_container input{
+.home__section__text__group .search_input_container input{
     width: 100%;
     font-size: 1.4rem;
     outline: none;
@@ -179,7 +165,7 @@
     background-color: #F1F6F9;
 }
 
-.section-home .home_body .search_input_container .btn{
+.home__section__text__group .search_input_container .btn{
     border-radius: 5rem;
     color: var(--bc-auxiliar-color);
     height: 100%;
@@ -188,25 +174,26 @@
     transition: 0.3s;
 }
 
-.section-home .home_body .search_input_container .btn:hover{
+
+.home__section__text__group .search_input_container .btn:hover{
     background-color: var(--principal-color-hover);
 }
 
-.section-home .home_body .warning_mini_section{
+.home__section__text__group .warning_mini_section{
     font-size: 1.3rem;
-    color: var(--text-principal-color-7);
+    color: var(--text-principal-color-5);
     width: 60%;
 }
 
-.section-home .home_body .warning_mini_section_header{
+.home__section__text__group .warning_mini_section_header{
     margin-right: 1rem;
-    height: 3rem;
-    width: 3rem;
-    border: 1px solid var(--text-principal-color-7);
+    height: 3.5rem;
+    width: 3.5rem;
+    border: 1px solid var(--text-principal-color-5);
     border-radius: 5rem;
 }
 
-.section-home .home_body .warning_mini_section p{
+.home__section__text__group .warning_mini_section p{
     line-height: 2rem;
     margin: 0;
     width: 80%;
@@ -282,6 +269,7 @@
 }
 
 .collection_section_text_group .title{
+    font-size: 3rem;
     margin: 1rem 0px 7vh;
 }
 
@@ -324,10 +312,10 @@
 
 .card_collection_container .card .card_text_group .subtitle{
     font-size: 2.3rem;
-    font-family: 'Noto Serif SC', serif;
+    font-family: 'Noto Sans SC', sans-serif;
     display: block;
-    font-weight: 900;
-    margin-bottom: 0.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
     color: var(--principal-color);
 }
 
@@ -348,79 +336,100 @@
 
 .about_section{
     width: 100%;
-    min-height: 80vh;
+    min-height: 100vh;
 }
 
-.about_section .about{
-    border-radius: 1.6rem;
-    width: 75%;
-    height: 100%;
+.about_section_text_group{
+    margin-top: 6vw;
+    width: 65%;
+
 }
 
-.about_section .about.flex{
-    flex-direction: column;
-    justify-content: center;
-}
-
-.about_section .about .about_paragraph{
-    font-weight: 500;
-    color: var(--text-principal-color);
-    text-align: center;
-    margin: 5vh 0px 9vh;
-    line-height: 3rem;
-    font-size: 2rem;
-}
-
-.about_section .about .perfil_comment{
-    border: 1px solid #F1F6F9;
-    box-shadow: 0px 5px 10px #F1F6F9;
-    padding: 1rem;
-    border-radius: 1.6rem;
-    width: 35%;
-    height: 10vh;
-    position: relative;
-}
-
-.about_section .about .perfil_comment.flex{
-    justify-content: space-between;
-}
-
-.about_section .about .perfil_comment .perfil-img{
-    object-fit: cover;
-    border-radius: 20rem;
-    margin-right: 2rem;
-    height: 7vh;
-    width: 7vh;
-}
-
-.about_section .about .perfil_comment .perfil_text_group p{
-    font-size: 1.4rem;
+.about_us_waning{
     color: var(--text-principal-color-7);
 }
 
-.about_section .about .perfil_comment .perfil_text_group h2{
-    font-weight: 900;
-    margin-bottom: 3px;
-    font-size: 1.6rem;
-    color: var(--principal-color);
+.about_section .title{
+    line-height: 4.5rem;
+    font-size: 3rem;
+    margin: 2rem 0px 4rem;
+    text-align: center;
+    width: 65%;
 }
 
-.verify-label_img{
-    width: 2rem;
+.about_section_text_group.flex{
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.about_section_text_group .about_paragraph{
+    font-weight: 500;
+    font-size: 1.7rem;
+    color: var(--text-principal-color-7);
+    text-align: justify;
+    line-height: 2.5rem;
+}
+
+.about_section.flex{
+    flex-direction: column;
+}
+
+.about_section figure{
+    position: relative;
+    width: 80%;
+    height: 20vh;
+}
+
+.about_section figure img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 1.6rem;
+    object-fit: cover;
+    object-position: 40% 85%;
+}
+
+.about_section figure:hover figcaption{   
+    visibility: visible;
+    opacity: 1;
+}
+
+.about_section figure figcaption{
+    color: var(--bc-princiapl-color);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(175deg, rgba(255, 255, 255, 0.0), rgba(33, 42, 62, 0.5), rgb(33, 42, 62) 90%);
+    padding-inline: 3rem;
+    padding-bottom: 2rem;
     position: absolute;
-    top: 15%;
-    right: 10%;
+    bottom: 0;
+    border-radius: 1.6rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+} 
+
+.about_section figure figcaption.flex{
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+.about_section figure figcaption .link{
+    text-align: end;
+    width: 70%;
+    font-size: 1.4rem;
+    color: var(--bc-princiapl-color);
+}
+
+.about_section figure figcaption > .link{
+   margin-bottom: 0.5rem;
 }
 
 .italic-empasis{
     font-style: italic;
 }
 
-/*--------------------------------------------------------------------------------------------*/
-footer{
-    width: 100%;
-    min-height: 70vh;
-}
 
 /*--------------------------------------------------------------------------------------------*/
 
@@ -449,17 +458,12 @@ footer{
     color: var(--principal-color);
 }
 
-/*.btn span{
-    margin-right: 0.8rem;
-}*/
-
 .btn.avoid{
     background-color: var(--auxiliar-background-color);
     color: var(--color);
 }
 
 .btn:hover{
-    border: n;
     color: var(--bc-princiapl-color);
     background-color: var(--principal-color-hover);
 }
