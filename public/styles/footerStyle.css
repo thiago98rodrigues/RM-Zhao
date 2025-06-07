@@ -2,7 +2,8 @@ footer{
     width: 100%;
     height: 50vh;
     font-size: 1.6rem;
-    color: var(--bc-auxiliar-color);   
+    color: var(--bc-auxiliar-color);
+    background-color: #FFF2F2;  
 }
 
 footer img{
