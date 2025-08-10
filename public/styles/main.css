@@ -49,8 +49,19 @@ html {
 }
 
 .title,
-.characters_emphasis{
+.characters_emphasis,
+.floating__text{
     font-family: "Noto Serif HK", serif;
+}
+
+.floating__text{
+    position: absolute;
+    font-family: "Noto Serif HK", serif;
+    color: var(--principal-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
 }
 
 .title{
@@ -229,7 +240,7 @@ html {
 
 .info_section {
     position: relative;
-    min-height: 40vh;
+    min-height: 30vh;
     width: 85%;
     margin: 13vh 0px 7rem;
     padding: 5%;
@@ -298,9 +309,10 @@ html {
 
 .collection_section{
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     /*background-color: #F1F6F9;*/
-    padding: 10vh 0px;
+    padding: 10vh 0px 5rem;
+    /*display: none;*/
 }
 
 .collection_section.flex{
@@ -339,6 +351,10 @@ html {
     
     box-shadow: 0px 10px 10px #F1F6F9;
     border: 1px solid #F1F6F9;
+    transition: .3s;
+}
+.card_collection_container .card:hover{
+    transform: scale(1.05);
 }
 
 .card_collection_container .card .card_header{
@@ -402,6 +418,7 @@ html {
     background-repeat: no-repeat;
     -webkit-backdrop-filter: blur(45px);
     backdrop-filter: blur(5px);
+
 }
 
 .about_section_text_group{
@@ -410,18 +427,23 @@ html {
 }
 
 .about_us_waning{
-    font-family: "Noto Serif HK", serif;
-    color: var(--principal-color);
-    font-weight: 700;
+    color: var(--text-principal-color-7);
+   
 }
 
 .about_section .title{
     line-height: 4.5rem;
     font-size: 3.2rem;
     font-weight: 800;
-    margin: 2rem 0px 4rem;
+    margin: 1.5rem 0px 4rem;
     text-align: center;
     width: 79%;
+    position: relative;
+}
+
+.about_section .floating__text{
+    top: -1.5rem;
+    right: -2rem;
 }
 
 .about_section_text_group.flex{
@@ -453,7 +475,7 @@ html {
     width: 100%;
     border-radius: 1.6rem;
     
-    object-position: 80% 30%;
+    object-position: 50% 47%;
 }
 
 .about_section figure:hover figcaption{   
@@ -497,17 +519,7 @@ html {
     font-style: italic;
 }
 
-/*--------------------------------------------------------------------------------------------*/
-.newsletter__section{
-    width: 80%;
-    min-height: 30vh;
-    background: var(--text-principal-color);
-    border-radius: 1.6rem;
-    color: white;
-}
 
-
-/*--------------------------------------------------------------------------------------------*/
 
 .btn{
     display: flex;
